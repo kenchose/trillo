@@ -1,0 +1,6 @@
+@use "../utils/variables" as v;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: v.$color-grey-dark-2;
+}
