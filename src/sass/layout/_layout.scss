@@ -27,10 +27,15 @@
 .sidebar {
   background-color: u.$color-grey-dark-1;
   flex: 0 0 18%; // 1st # = growth, 2nd # = shrink, 3rd # = always keep at 18%
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hotel-view {
   background-color: #fff;
   background-color: orangered;
+  height: 80rem;
   flex: 1;
 }
