@@ -3,7 +3,7 @@
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid v.$color-grey-light-2;
+  border-bottom: v.$border-line;
 
   &__heading {
     font-size: 2.25rem;
@@ -69,7 +69,7 @@
   background-color: transparent;
   cursor: pointer;
   transition: all 0.2s;
-  border-bottom: 1px solid currentColor;
+  border-bottom: v.$border-line;
 
   &:hover {
     color: v.$color-grey-dark-1;
