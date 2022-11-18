@@ -1,4 +1,4 @@
-@use "../utils" as u;
+@use "../utils" as v;
 
 *,
 *::after,
@@ -10,7 +10,11 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem = 10px
+
+  @include v.breakpoint-down("medium") {
+    font-size: 50%; // 8/16 = 50% will decrease font-size to 8px from 10px;
+  }
 }
 
 body {
@@ -18,8 +22,8 @@ body {
   line-height: 1.6;
   background-image: linear-gradient(
     to right bottom,
-    u.$color-primary-light,
-    u.$color-primary-dark
+    v.$color-primary-light,
+    v.$color-primary-dark
   );
   background-size: cover;
   background-repeat: no-repeat;

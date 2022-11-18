@@ -7,6 +7,12 @@
   box-shadow: v.$shadow-dark;
 
   min-height: 50rem;
+
+  @include v.breakpoint-down(large) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .header {
@@ -22,6 +28,9 @@
 
 .content {
   display: flex;
+  @include v.breakpoint-down(small) {
+    flex-direction: column;
+  }
 }
 
 .sidebar {

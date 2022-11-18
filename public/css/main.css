@@ -11,6 +11,11 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+@media (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   font-weight: 400;
@@ -33,6 +38,13 @@ body {
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   min-height: 50rem;
 }
+@media (max-width: 75em) {
+  .container {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
 
 .header {
   font-size: 1.4rem;
@@ -46,6 +58,11 @@ body {
 
 .content {
   display: flex;
+}
+@media (max-width: 56.25em) {
+  .content {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -160,13 +177,31 @@ body {
   list-style: none;
   margin-top: 3.5rem;
 }
+@media (max-width: 56.25em) {
+  .side-nav {
+    display: flex;
+    margin: 0;
+  }
+}
 .side-nav__item {
   display: flex;
   align-items: center;
   position: relative;
 }
+@media (max-width: 56.25em) {
+  .side-nav__item {
+    flex: 1;
+    justify-content: center;
+    padding: 2rem;
+  }
+}
 .side-nav__item:not(:last-child) {
   margin-bottom: 0.5rem;
+}
+@media (max-width: 56.25em) {
+  .side-nav__item:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 .side-nav__item::before {
   content: "";
@@ -183,7 +218,7 @@ body {
   transform: scaleY(1);
   width: 100%;
 }
-.side-nav__item:active::before {
+.side-nav:active::before {
   background-color: #ff3366;
 }
 .side-nav__link:link, .side-nav__link:visited {
@@ -208,6 +243,11 @@ body {
   color: #ccc;
   text-align: center;
   padding: 2.5rem;
+}
+@media (max-width: 56.25em) {
+  .legal {
+    display: none;
+  }
 }
 
 .gallery {
@@ -278,6 +318,11 @@ body {
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+}
+@media (max-width: 56.25em) {
+  .cta {
+    padding: 2.5rem 0;
+  }
 }
 .cta__book-now {
   font-size: 2rem;
@@ -385,6 +430,11 @@ body {
   background-color: #faf9f9;
   border-bottom: 1px solid #f4f2f2;
 }
+@media (max-width: 56.25em) {
+  .detail {
+    padding: 3rem;
+  }
+}
 
 .description {
   background-color: #fff;
@@ -392,6 +442,12 @@ body {
   padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4.5rem;
+}
+@media (max-width: 56.25em) {
+  .description {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
 }
 
 .user-reviews {
@@ -450,7 +506,7 @@ body {
   background-color: transparent;
 }
 .recommend__photo:not(:last-child) {
-  margin-right: -1.5rem;
+  margin-right: -2rem;
 }
 
 .review {
@@ -460,6 +516,12 @@ body {
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
+}
+@media (max-width: 56.25em) {
+  .review {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
 }
 .review__text {
   margin-bottom: 2rem;

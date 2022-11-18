@@ -6,6 +6,10 @@
   padding: 4.5rem;
   background-color: v.$color-grey-light-1;
   border-bottom: v.$border-line;
+
+  @include v.breakpoint-down(small) {
+    padding: 3rem;
+  }
 }
 
 .description {
@@ -14,6 +18,11 @@
   padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4.5rem;
+
+  @include v.breakpoint-down(small) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
 }
 
 .user-reviews {
@@ -81,7 +90,7 @@
     background-color: transparent;
 
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 }

@@ -19,3 +19,21 @@ $border-line: 1px solid $color-grey-light-2;
 
 // FONTS
 $font-primary: "Open Sans", sans-serif;
+
+// BREAKPOINTS
+$breakpoints-down: (
+  "xsmall": 37.5em,
+  // 600 / 16
+  "small": 56.25em,
+  // 900 /16 = 56.25
+  "medium": 68.75em,
+  // 1100 / 16 = 68.75
+  "large": 75em,
+  // 1200 / 16 = 75
+);
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down , $size )) {
+    @content;
+  }
+}
