@@ -12,7 +12,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
 
-  @include v.breakpoint-down("medium") {
+  @include v.breakpoint-down("large") {
     font-size: 50%; // 8/16 = 50% will decrease font-size to 8px from 10px;
   }
 }

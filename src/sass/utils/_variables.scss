@@ -22,18 +22,20 @@ $font-primary: "Open Sans", sans-serif;
 
 // BREAKPOINTS
 $breakpoints-down: (
-  "xsmall": 37.5em,
+  "xsmall": 31.25em,
+  // 500 / 16 = 43.75em
+  "small": 37.5em,
   // 600 / 16
-  "small": 56.25em,
+  "medium": 56.25em,
   // 900 /16 = 56.25
-  "medium": 68.75em,
+  "large": 68.75em,
   // 1100 / 16 = 68.75
-  "large": 75em,
+  "xlarge": 75em,
   // 1200 / 16 = 75
 );
 
 @mixin breakpoint-down($size) {
-  @media (max-width: map-get($breakpoints-down , $size )) {
+  @media only screen and (max-width: map-get($breakpoints-down , $size )) {
     @content;
   }
 }

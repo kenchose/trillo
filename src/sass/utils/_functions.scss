@@ -1,0 +1,25 @@
+@use "sass:math";
+
+@function rem($pixel) {
+  // convert pixels to rem
+  // divide pixel by 16 to return rems
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem; // 16 = default browser 16px
+  }
+  // If $pixel has a unit, throw an error
+  @else {
+    @error "Don't use units if using the rem() function; only numbers.";
+  }
+}
+
+@function em($pixel) {
+  // converts pixes to em
+  // divide pixel by 16 to return ems
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + em;
+  }
+  // If $pixel has a unit, throw an error
+  @else {
+    @error "Don't use units if using the em() function; only numbers.";
+  }
+}

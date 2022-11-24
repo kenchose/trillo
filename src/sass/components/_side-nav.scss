@@ -5,7 +5,7 @@
   list-style: none;
   margin-top: 3.5rem;
 
-  @include v.breakpoint-down(small) {
+  @include v.breakpoint-down(medium) {
     display: flex;
     margin: 0;
   }
@@ -15,7 +15,7 @@
     align-items: center;
     position: relative;
 
-    @include v.breakpoint-down(small) {
+    @include v.breakpoint-down(medium) {
       flex: 1;
       justify-content: center;
       padding: 2rem;
@@ -24,7 +24,7 @@
     &:not(:last-child) {
       margin-bottom: 0.5rem;
 
-      @include v.breakpoint-down(small) {
+      @include v.breakpoint-down(medium) {
         margin-bottom: 0;
       }
     }
@@ -64,6 +64,11 @@
 
     display: flex;
     align-items: center;
+
+    @include v.breakpoint-down(small) {
+      flex-direction: column;
+      padding: 1.5rem;
+    }
   }
 
   &__icon {
@@ -71,6 +76,13 @@
     width: 1.75rem;
     margin-right: 2rem;
     fill: currentColor;
+
+    @include v.breakpoint-down(small) {
+      margin-right: 0;
+      margin-bottom: 0.7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 }
 
@@ -80,7 +92,7 @@
   text-align: center;
   padding: 2.5rem;
 
-  @include v.breakpoint-down(small) {
+  @include v.breakpoint-down(medium) {
     display: none;
   }
 }

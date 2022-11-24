@@ -7,8 +7,12 @@
   background-color: v.$color-grey-light-1;
   border-bottom: v.$border-line;
 
-  @include v.breakpoint-down(small) {
+  @include v.breakpoint-down(medium) {
     padding: 3rem;
+  }
+
+  @include v.breakpoint-down(small) {
+    flex-direction: column;
   }
 }
 
@@ -19,9 +23,14 @@
   flex: 0 0 60%;
   margin-right: 4.5rem;
 
-  @include v.breakpoint-down(small) {
+  @include v.breakpoint-down(medium) {
     padding: 2rem;
     margin-right: 3rem;
+  }
+
+  @include v.breakpoint-down(small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
   }
 }
 
@@ -62,7 +71,7 @@
     // background-image: url(../../../src/img/chevron-thin-right.svg);
     // background-size: cover;
 
-    // newer browsers
+    // newer browsers - mask-image property
     background-color: v.$color-primary;
     mask-image: url(../../../src/img/chevron-thin-right.svg);
     mask-size: cover;

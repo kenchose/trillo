@@ -8,7 +8,7 @@
 
   min-height: 50rem;
 
-  @include v.breakpoint-down(large) {
+  @include v.breakpoint-down(xlarge) {
     margin: 0;
     max-width: 100%;
     width: 100%;
@@ -24,11 +24,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include v.breakpoint-down(xsmall) {
+    flex-wrap: wrap;
+    height: 11rem;
+    align-content: space-between;
+  }
 }
 
 .content {
   display: flex;
-  @include v.breakpoint-down(small) {
+  @include v.breakpoint-down(medium) {
     flex-direction: column;
   }
 }

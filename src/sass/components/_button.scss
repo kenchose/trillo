@@ -52,7 +52,7 @@
   padding: 3.5rem 0;
   text-align: center;
 
-  @include v.breakpoint-down(small) {
+  @include v.breakpoint-down(medium) {
     padding: 2.5rem 0;
   }
 
